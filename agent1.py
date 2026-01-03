@@ -63,7 +63,7 @@ def weather_agent(query: str):
 
     elif mode == "forecast":
         data = get_forecast_weather(city)
-        tomorrow_data = data["list"][8]  # approx 24 hrs later
+        tomorrow_data = data["list"][8] 
         return {
             "agent_decision": "Used Forecast Weather Tool",
             "response": f"Tomorrow in {city}, the temperature will be around {tomorrow_data['main']['temp']}°C with {tomorrow_data['weather'][0]['description']}."
